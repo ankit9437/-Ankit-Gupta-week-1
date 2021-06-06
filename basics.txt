@@ -1,0 +1,172 @@
+#10. WAP to create and print the List data type
+
+l=[]
+l.append(1)
+l.append(2)
+print(l)
+
+"""Output
+[1, 2]"""#11. WAP to create and print the Tuple data type
+
+tuplex = ("tuple", False, 3.2, 1)
+print(tuplex)
+
+"""Output
+('tuple', False, 3.2, 1)"""#12. WAP to create and print the Range data type
+
+for i in range(10):
+    print(i)
+
+"""Output
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9"""#13. WAP to create and print the Set data type
+a = {5,2,3,1,4}
+print(a)
+
+"""Output
+{1, 2, 3, 4, 5}"""#14. WAP to create and print the Frozenset data type
+vowels = ('a', 'e', 'i', 'o', 'u')
+
+fSet = frozenset(vowels)
+print('The frozen set is:', fSet)
+
+"""Output
+The frozen set is: frozenset({'a', 'u', 'e', 'i', 'o'})"""#15. WAP to create and print the Dict data type
+dict={1:"3", 2:"4", 3:"5"}
+print(dict)
+
+"""Output
+{1: '3', 2: '4', 3: '5'}"""#16. WAP to print swap two numbers without using the third variable
+a=4
+b=6
+print("a is",a, "b is",b)
+a=a+b
+b=a-b
+a=a-b
+print("a is",a, "b is",b)
+
+"""Output
+a is 4 b is 6
+a is 6 b is 4"""#17. What is none data type, declare and print it
+
+"""None is type of datatype that denotes empty value for a variable"""
+
+a=None
+print(a)
+
+"""Output
+None"""#18. del statement: explain with use
+
+"""del is used to delete value from a list in python."""#19. What is difference between del and none
+
+"""del is used to delete values in python whereas none is used to show empty value"""#2. WAP to get the type, address of below variable and print them
+a = 10
+b = 3.124
+c = "35"
+d = "4.2"
+e = "s1"
+print (type(a), hex(id(a)))
+print (type(b), hex(id(b)))
+print (type(c), hex(id(c)))
+print (type(d), hex(id(d)))
+print (type(e), hex(id(e)))
+
+"""Output
+<class 'int'> 0x7ffed1847d60
+<class 'float'> 0x28c0171e4f0
+<class 'str'> 0x28c018a8270
+<class 'str'> 0x28c018a8fb0
+<class 'str'> 0x28c018d6c30"""#3. List down the rules to define identifiers in python
+
+"""Identifiers can be a combination of letters in lowercase (a to z) or uppercase (A to Z) or digits (0 to 9)
+or an underscore _.
+An identifier cannot start with a digit.
+Keywords cannot be used as identifiers.
+We cannot use special symbols like !, @, #, $, % etc. in our identifier.
+""""""4. What is valid identifier:
+	1. 22region
+	2. my250
+	3. python2021batch
+	4. dollar$toinr
+	5. _aztec_cs
+	6. define
+	7. import"""
+
+#my250, python2021batch, _aztec_cs are the valid identifiers#5. List down reserver keywords and theirs usages
+
+"""False	await	else	import	pass
+None	break	except	in	raise
+True	class	finally	is	return
+and	continue	for	lambda	try
+as	def	from	nonlocal	while
+assert	del	global	not	with
+async	elif	if	or	yield
+
+are the reservied keywords in python
+False is used in boolean
+None is used to define empty variable
+and is used in conditional operation
+as is used in importing a module
+assert is used for debugging purposes
+async keyword is provided by library in python
+break is used to exit a loop
+class is a user defined data type
+continue is used in loop
+del is used to delete a value
+elif is used in condtional statement
+except is used in exception handling
+def is used to define a function
+global is used to define a lobal data type
+if,or is used in conditional statement
+import is used in imporing a library
+in is used tn defining range of iteration
+try,pass is used in exception handling
+"""#6. What is import
+"""import is a method in python to import packages or libraries in python"""#7. Print 123 in decimal, binary, octal and hexadecinal format using base conversion functions
+
+dec = 123
+print(bin(dec), "in binary.")
+print(oct(dec), "in octal.")
+print(hex(dec), "in hexadecimal.")
+
+"""Output
+0b1111011 in binary.
+0o173 in octal.
+0x7b in hexadecimal."""#8. Casting, write a programe to cast and print all the below variables into int, float, complex, bool and string. Mention the reason wherever the conversion did not happen.
+a = 10
+b = 3.124
+c = "35"
+d = "4.2"
+e = "s1"
+f = True
+g = "0B1111"
+h= "five"
+i= 0
+print(float(a), complex(a),str(a))
+print(int(b), complex(b),str(b))
+print(int(c), complex(c),float(c))
+print(float(d))
+"""4.2 is in float so it cannot be converted to integer. h is a string so it cannot be converted to
+integer or float, f is a boolean value so it cannot be converted to integer"""#9. What is bytes data type and bytearray data type, define and print its type, address
+
+"""Bytes return a new "bytes" object, which is an immutable sequence of small integers in the range 0 <= x < 256,
+Bytesarray eturn a new array of bytes. The bytearray type is a mutable sequence of integers in the range 0 <= x < 256."""#1. Declare below types of variables and print them
+#Text:str
+#Numeric:int, float, complex (Positive and Negative)
+#Boolean:bool
+#Binary: bytes
+#String: str
+
+string=input()
+numeric=int(input())
+boolean=input(bool())
+binary = int('11110000', 2)
+print(string,numeric,boolean,binary)
