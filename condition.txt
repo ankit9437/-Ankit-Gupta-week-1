@@ -1,0 +1,647 @@
+#10. WAP to print "Yes" if bool is True  else print "No"
+
+x=input()
+if(x):
+    print("Yes")
+else:
+    print("No")
+
+"""Output
+3
+Yes"""#11. WAP to print whether entered number if int, float or complex
+
+x=4.6
+print(type(x))
+
+"""Output
+<class 'float'>"""#12. WAP to print biggest of three numbers
+
+a=int(input())
+b=int(input())
+c=int(input())
+
+if(a>b and a>c):
+    print(a)
+elif(b>a and b>c):
+    print(b)
+elif(c>a and c>b):
+    print(c)
+
+"""Output
+1
+2
+3
+3"""#13. WAP to print Student is passed if student scores more than 40 marks in Physics ,Chemistry and Maths
+
+phy= int(input())
+chem = int(input())
+maths=int(input())
+
+if(phy>40 and chem>40 and maths>40):
+    print("Passed")
+else:
+    print("Failed")
+
+"""Output
+33
+44
+55
+Failed"""#14. WAP to print perosn is minor or retired. Person will be minor if age is less than equal to 18 and person will be retired if age is greated than equal to 58
+
+age=int(input())
+if(age<=18):
+    print("Minor")
+elif(age>=58):
+    print("Retired")
+
+"""Output
+60
+Retired"""#15. WAPTP to print "Number" if the type of entered value is int or float, print "Binary" if type of entered value is binary and print "Strning" if type of entered value is str
+
+x='ddffd'
+if(type(x)==int or type(x)==float):
+    print("Number")
+elif(type(x)==str):
+    print("String")
+else:
+    p = set(x)
+    s = {'0', '1'}
+    if s == p or p == {'0'} or p == {'1'}:
+        print("Binary")
+
+"""Output
+String"""# 16. WAPTP characters present in "Chistats pvt ltd"
+
+x= "Chistats pvt ltd"
+count=0
+for i in x:
+    if(i!=" "):
+        count+=1
+print(count)
+
+"""Output
+14"""
+#17. WAPTP index wise characters presentin string
+x=input()
+for i in range(len(x)):
+    if(x[i]!=" "):
+        print(x[i],':', i+1)
+
+"""Output
+hh
+h : 1
+h : 2"""#18. WAPTP numbers from 10 to 20
+for i in range(10,21):
+    print(i)
+
+"""Output
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20"""#19. WAPTP numbers from 30 to 20 in descending order
+
+for i in range(30,19,-1):
+    print(i)
+
+"""Output
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20"""#2. WAP to print "Welcome to Chistats" if isHired value is True
+
+hired = int(input())
+if(bool(hired) == True):
+    print("Welcome to Chistats")
+
+"""Output
+1
+Welcome to Chistats"""#20. WAPTP Sum of numbers from 1 to 10
+for i in range(1,11):
+    print(i)
+
+"""Output
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10"""#21. WAPTP sum of first n natural numbers
+
+n=int(input())
+s=0
+for i in range(1,n+1):
+    s+=i
+print(s)
+
+"""Output
+10
+55"""#21. WAPTP the multiplication table of a given integer
+
+n=int(input())
+for i in range(1,11):
+    print(n,"*",i," =",n*i)
+
+"""Output
+10
+10 * 1  = 10
+10 * 2  = 20
+10 * 3  = 30
+10 * 4  = 40
+10 * 5  = 50
+10 * 6  = 60
+10 * 7  = 70
+10 * 8  = 80
+10 * 9  = 90
+10 * 10  = 100"""#20. WAPTP cube of first n numbers
+n=int(input())
+for i in range(1,n+1):
+    print(i**3)
+
+"""Output
+3
+1
+8
+27"""#24. WAPTP fibonacci series of n
+
+n=int(input())
+if(n==0):
+    print(0)
+elif(n==1):
+    print(1)
+else:
+    l=[]
+    l.append(0)
+    l.append(1)
+    for i in range(n-2):
+        l.append(l[i]+l[i+1])
+    print(*l)
+
+"""Output
+5
+0 1 1 2 3"""#25. WAP to compyte the log of 2 by adding n terms in the series 1 - 1/2 + 1/3 - 1/4 + 1/5 -... 1/n where n is a positive number
+n=int(input())
+s=0
+for i in range(n):
+    if(i%2==0):
+        s=s+(1/(i+1))
+    else:
+        s=s-(1/(i+1))
+print(s)
+
+"""Output
+5
+0.7833333333333332"""#26. WAPTP all armstrong numbers between 1 and 10000
+#If sum of cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number.
+#For example, 153 = ( 1 * 1 * 1 ) + ( 5 * 5 * 5 ) + ( 3 * 3 * 3 )
+
+for i in range(1,1001):
+    order = len(str(i))
+    sum = 0
+    temp = i
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
+    if(order!=1 and i==sum):
+        print(i)
+    elif(i==1):
+        print(1)
+
+"""Output
+1
+153
+370
+371
+407"""
+
+#27. WAPTP all prime numbers within a range 1 to 500
+
+for i in range(2,500):
+    flag=0
+    for j in range(2, i):
+        if (i % j == 0):
+            flag=1
+            break
+    if(flag==0):
+        print(i)
+
+"""Output
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+101
+103
+107
+109
+113
+127
+131
+137
+139
+149
+151
+157
+163
+167
+173
+179
+181
+191
+193
+197
+199
+211
+223
+227
+229
+233
+239
+241
+251
+257
+263
+269
+271
+277
+281
+283
+293
+307
+311
+313
+317
+331
+337
+347
+349
+353
+359
+367
+373
+379
+383
+389
+397
+401
+409
+419
+421
+431
+433
+439
+443
+449
+457
+461
+463
+467
+479
+487
+491
+499"""
+
+#28. WAP to reverse a given integer number 23564
+Reverse = 0
+Number=23564
+while (Number > 0):
+    Reminder = Number % 10
+    Reverse = (Reverse * 10) + Reminder
+    Number = Number // 10
+print(Reverse)
+
+"""Output
+46532"""#29. WAPTP numbers from 1 to 10
+i=1
+while(i<=10):
+    print(i)
+    i+=1
+
+"""Output
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10"""#3. WAP to print "Eligible for Vote" if age is greater than 18
+
+age = int(input())
+if age > 18:
+    print("Eligible to Vote")
+else:
+    print ("Not Eligible")
+
+"""Output
+12
+Not Eligible"""
+#30. WAPTP sum of first 100 nmbers
+sum=0
+i=1
+while(i<=100):
+    sum=sum+i
+    i+=1
+print(sum)
+
+"""Outpit
+5050"""#31. WAPTP string until user enters "stop"
+string=input()
+while(string!='stop'):
+    print(string)
+    string=input()
+
+"""Output
+stop"""#32. WAPTP average of first 10 numbers
+sum=0
+for i in range(1,11):
+    sum+=i
+avg=sum//10
+print(avg)
+
+"""Output
+5"""#33. WAP to calculate factorial of given number
+
+n=int(input())
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)
+
+"""Output
+5
+120"""#34. WAP to calculate GCD and LCM
+a=int(input())
+b=int(input())
+x,y=a,b
+while (y):
+    x, y = y, x % y
+hcf=x
+x,y=a,b
+if (x > y):
+    greater = x
+else:
+    greater = y
+
+while (True):
+    if ((greater % x == 0) and (greater % y == 0)):
+        lcm = greater
+        break
+    greater += 1
+print("HCF is:",hcf,"and LCM is: ",lcm)
+
+"""Output
+10
+25
+HCF is: 5 and LCM is:  50"""#35. WAP that generates a random number and asks the user to guess what the number is. If the user's guess is higher than the random number, the program should display "Too high, try again." If the user's guess is lower than the random number, the program should display "Too low, try again." The program should use a loop that repeats until the user correctly guesses the random numbe
+import random
+
+num=random.randint(0,20)
+x=int(input())
+while(x!=num):
+    if(x<num):
+        print("Too low,try again")
+    elif(x>num):
+        print("Too high, try again")
+print("Correct Answer")#36. WAPTP true if there is an equal number of x's and o's present in the string, otherwise print false
+
+string=input()
+x=string.count('x')
+o=string.count('o')
+if(x==o):
+    print('true')
+else:
+    print('false')
+
+"""Output
+x
+false"""#37. Given three numbers x, y and p, compute (xy) % p
+
+x=int(input())
+y=int(input())
+p=int(input())
+
+print((x**y)%p)
+
+"""Output
+2
+3
+4
+0
+"""
+#38. Given three numbers a, b and c, we need to find (ab) % c
+a=int(input())
+b=int(input())
+c=int(input())
+
+print((a**b)%c)
+
+"""Output
+3
+4
+5
+1
+"""#39. Have the function ArithGeo(arr) take the array of numbers stored in arr and return the string "Arithmetic" if the sequence follows an arithmetic pattern or return "Geometric" if it follows a geometric pattern. If the sequence doesn't follow either pattern return -1. An arithmetic sequence is one where the difference between each of the numbers is consistent, where as in a geometric sequence, each term after the first is multiplied by some constant or common ratio. Arithmetic example: [2, 4, 6, 8] and Geometric example: [2, 6, 18, 54]. Negative numbers may be entered as parameters, 0 will not be entered, and no array will contain all the same elements.
+l=[]
+l=[int(x) for x in input().split()]
+diff=l[1]-l[0]
+flag=0
+for i in range(len(l)-1):
+    if((l[i+1]-l[i])!=diff):
+        flag=1
+if(flag==0):
+    print("Arithmetic series")
+r=l[1]//l[0]
+glag=0
+for i in range(len(l)-1):
+    if((l[i+1]//l[i])!=r):
+        glag=1
+if(glag==0):
+    print("Geometric Series")
+if(flag==1 and glag==1):
+    print(-1)
+
+"""Output
+2 3 4 5
+Arithmetic series"""#WAP to print "Passed" if marks obtained in exam are greater than 40 if not then print "Failed"
+marks= int(input())
+
+if(marks>40):
+    print("Passed")
+else:
+    print("Failed")
+
+"""Output
+30
+Failed"""#40. Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH.
+
+def FirstReverse(s):
+    l=s.split()
+    for i in range(len(l)-1,-1,-1):
+        x=l[i]
+        y=x[::-1]
+        print(y," ",end="")
+s=input()
+FirstReverse(s)
+
+"""Output
+ankit
+tikna  """#Have the function NextPalindrome(num) take the num parameter being passed and return the next largest palindromic number. The input can be any positive integer. For example: if num is 24, then your program should return 33 because that is the next largest number that is a palindrome.
+
+x=56
+l=[]
+l.append(x)
+y=l[::-1]
+print(y)
+
+"""Output
+[56]"""#42. Notedown usages of break, continue and pass
+
+"""The break statement is used to terminate the loop or statement in which it is present. After that, the
+control will pass to the statements that are present after the break statement, if available.
+continue instead of terminating the loop, it forces to execute the next iteration of the loop.
+The pass statement in Python is used when a statement is required syntactically but you do not want any command
+or code to execute"""#WAP to print the numbers till 7 in the for loop, having range of 1 to 10. Must use break keyword
+for i in range(1,11):
+    if(i==7):
+        break
+    else:
+        print(i)
+
+"""Output
+1
+2
+3
+4
+5
+6"""#WAPTP odd numbers from the for loop, having range of 1 to 10. Must use continue keyword
+
+for i in range(1,11):
+    if(i%2==0):
+        continue
+    else:
+        print(i)
+
+"""Output
+1
+3
+5
+7
+9"""#WAPTP odd numbers from the for loop, having range of 1 to 10. Must use pass keyword
+for i in range(1,11):
+    if(i%2!=0):
+        print(i)
+    else:
+        pass
+
+"""Output
+1
+3
+5
+7
+9"""#5. WAP to print "Covid positive" if SARS-CoV-2  is detected else "Covid negative"
+
+SARS_CoV=int(input())
+if(SARS_CoV):
+    print("Covid positive")
+else:
+    print("Covid negative")
+
+"""Output
+1
+Covid positive"""#6. WAP to print "Hi Sarthak" if girl says hi else print "Bye Sarthak"
+
+girl=input()
+if(girl=='hi'):
+    print("Hi Ankit")
+else:
+    print("Bye Ankit")
+
+"""Output
+hi
+Hi Ankit"""#7. WAP to print biggest of two numbers
+
+num_1=int(input())
+num_2=int(input())
+if(num_1>num_2):
+    print(num_1)
+else:
+    print(num_2)
+
+"""Output
+2
+3
+3"""#8. WAP to print entered number is positive, negative or zero
+
+num=int(input())
+if(num>0):
+    print("Positive")
+elif(num<0):
+    print("Negative")
+else:
+    print("Zero")
+
+"""Output
+3
+Positive"""#9. WAP to print the season, print Summer,if month entered is between March to June, print Monsoon if month entered is between July to October and Winter if if month entered is between November to Feb.
+
+month=['January' , 'February' , 'March','April','May','June','July','August','September','October','November','December']
+x=input()
+index=month.index(x)+1
+if(index>=3 and index<=6):
+    print("Summer")
+elif(index>=7 and index<=9):
+    print("Monsoon")
+else:
+    print("Winter")
+
+"""Output
+May
+Summer"""
+
+#1. WAP to print Welcome to Python if str is "python"
+
+x=input()
+if(x=='python'):
+    print("Welcome to Python")
